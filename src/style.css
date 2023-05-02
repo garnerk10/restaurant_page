@@ -1,3 +1,9 @@
-#test {
+#title {
     color: blue;
+    text-align: center;
+}
+
+#navDiv {
+    display: flex;
+    justify-content: space-around;
 }
