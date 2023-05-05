@@ -24,7 +24,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'New Restaurant',
+      title: 'Palace Diner',
     }),
   ],
   devtool: 'inline-source-map',
