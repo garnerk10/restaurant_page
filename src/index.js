@@ -1,4 +1,5 @@
 import './style.css';
+import Cinderella from './cinderella.jpg';
 
 const createContent = () => {
     const contentDiv = document.createElement("div");
@@ -23,14 +24,17 @@ const createNavBar = (() => {
 
     const homeTab = document.createElement("h2");
     homeTab.innerText = "Home";
+    homeTab.setAttribute('id', 'homeBtn');
     navDiv.appendChild(homeTab);
 
     const menuTab = document.createElement("h2");
     menuTab.innerText = "Menu";
+    menuTab.setAttribute('id', 'menuBtn');
     navDiv.appendChild(menuTab);
 
     const contactTab = document.createElement("h2");
     contactTab.innerText = "Contact Us";
+    contactTab.setAttribute('id', 'contactBtn');
     navDiv.appendChild(contactTab);
 
     content.appendChild(navDiv);
@@ -50,7 +54,7 @@ const homeTab = (() => {
     aboutDiv.appendChild(homeHead);
     
     const about = document.createElement('p');
-    about.innerText = "Come in and enjoy a meal with some of your favorite princesses! Many princesses visit our dining room so be sure to check our site so you don't miss your favorite one."
+    about.innerText = "Come in and enjoy a meal with some of your favorite princesses! Many princesses visit our dining room so be sure to check our site. You don't miss your favorite one!"
     aboutDiv.appendChild(about);
     homeDiv.appendChild(aboutDiv);
 
@@ -62,8 +66,9 @@ const homeTab = (() => {
     visitorTitle.innerText = "This week's visitor";
     visitorDiv.appendChild(visitorTitle);
 
-    const visitorImg = document.createElement('image');
-    visitorImg.setAttribute('src', './cinderella.jpg')
+    const visitorImg = new Image();
+    visitorImg.src = Cinderella;
+    visitorImg.setAttribute('id', 'visitorImg');
     visitorDiv.appendChild(visitorImg);
 
     const visitorP = document.createElement('p');
@@ -90,7 +95,9 @@ const menuTab = (() => {
     menuDiv.setAttribute('id', 'menuTab');
     menuDiv.style.display = 'none'
 
+    const menuGrid = document.createElement('div');
 
+    menuDiv.appendChild(menuGrid);
     content.appendChild(menuDiv);
     const displayOn = () => {
         menuDiv.style.display = "flex";
@@ -109,6 +116,25 @@ const contactTab = (() => {
     contactDiv.setAttribute('id', 'contactTab');
     contactDiv.style.display = 'none';
 
+    const partyDiv = document.createElement('div');
+    const partyHeader = document.createElement('h3');
+    partyHeader.innerText = "Special Events";
+    partyDiv.appendChild(partyHeader);
+    const partyInfo = document.createElement('p');
+    partyInfo.innerText = "We can help you plan your special event here at our diner! Contact us with the details of your event and we will help make it a time you'll never forget!"
+    partyDiv.appendChild(partyInfo);
+
+    const infoDiv = document.createElement('div');
+    const phoneNum = document.createElement('h3');
+    phoneNum.innerText = "Pone: 444-333-1212";
+    const email = document.createElement('h3');
+    email.innerText = "Email: PalaceDiner@realemail.com";
+    infoDiv.appendChild(phoneNum);
+    infoDiv.appendChild(email);
+
+
+    contactDiv.appendChild(partyDiv);
+    contactDiv.appendChild(infoDiv);
     content.appendChild(contactDiv);
     const displayOn = () => {
         contactDiv.style.display = "flex";
@@ -120,3 +146,25 @@ const contactTab = (() => {
 
     return{contactDiv, displayOn, displayOff}
 })();
+
+const homeBtn = document.getElementById('homeBtn');
+const menuBtn = document.getElementById('menuBtn');
+const contactBtn = document.getElementById('contactBtn');
+
+homeBtn.onclick = function(){
+    homeTab.displayOn();
+    menuTab.displayOff();
+    contactTab.displayOff();
+};
+
+menuBtn.onclick = function(){
+    homeTab.displayOff();
+    menuTab.displayOn();
+    contactTab.displayOff();
+};
+
+contactBtn.onclick = function(){
+    homeTab.displayOff();
+    menuTab.displayOff();
+    contactTab.displayOn();
+};
