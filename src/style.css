@@ -11,3 +11,17 @@
 #visitorImg {
     width: 100px;
 }
+
+.crownSpace {
+    height: 50px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: "";
+}
+
+#homeCrown {
+    background-image: url("./crown.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}

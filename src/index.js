@@ -1,5 +1,6 @@
 import './style.css';
 import Cinderella from './cinderella.jpg';
+import Crown from './crown.png';
 
 const createContent = () => {
     const contentDiv = document.createElement("div");
@@ -22,20 +23,53 @@ const createNavBar = (() => {
     navDiv.setAttribute("class", "nav");
     navDiv.setAttribute("id", "navDiv");
 
+    const homeHolder = document.createElement('div');
+    const homeCrown = document.createElement('div');
+    homeCrown.setAttribute('class', 'crownSpace');
+    homeCrown.setAttribute('id', 'homeCrown');
+    homeCrown.onclick = function(){
+        homeCrown.style.backgroundImage = "url(./crown.png)";
+        menuCrown.style.backgroundImage = '';
+        contactCrown.style.backgroundImage = '';
+    };
+    homeHolder.appendChild(homeCrown);
     const homeTab = document.createElement("h2");
     homeTab.innerText = "Home";
     homeTab.setAttribute('id', 'homeBtn');
-    navDiv.appendChild(homeTab);
+    homeHolder.appendChild(homeTab);
+    navDiv.appendChild(homeHolder);
 
+    const menuHolder = document.createElement('div');
+    const menuCrown = document.createElement('div');
+    menuCrown.setAttribute('class', 'crownSpace');
+    menuCrown.setAttribute('id', 'menuCrown');
+    menuCrown.onclick = function(){
+        homeCrown.style.backgroundImage = '';
+        menuCrown.style.backgroundImage = "url(./crown.png)";
+        contactCrown.style.backgroundImage = '';
+    };
+    menuHolder.appendChild(menuCrown);
     const menuTab = document.createElement("h2");
     menuTab.innerText = "Menu";
     menuTab.setAttribute('id', 'menuBtn');
-    navDiv.appendChild(menuTab);
+    menuHolder.appendChild(menuTab);
+    navDiv.appendChild(menuHolder);
 
+    const contactHolder = document.createElement('div');
+    const contactCrown = document.createElement('div');
+    contactCrown.setAttribute('class', 'crownSpace');
+    contactCrown.setAttribute('id', 'contactCrown');
+    contactCrown.onclick = function(){
+        homeCrown.style.backgroundImage = '';
+        menuCrown.style.backgroundImage = '';
+        contactCrown.style.backgroundImage = "url(./crown.png)";
+    };
+    contactHolder.appendChild(contactCrown);
     const contactTab = document.createElement("h2");
     contactTab.innerText = "Contact Us";
     contactTab.setAttribute('id', 'contactBtn');
-    navDiv.appendChild(contactTab);
+    contactHolder.appendChild(contactTab);
+    navDiv.appendChild(contactHolder);
 
     content.appendChild(navDiv);
 })();
