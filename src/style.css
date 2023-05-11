@@ -3,25 +3,45 @@
     text-align: center;
 }
 
+/*Navigation bar and crown tabs*/
 #navDiv {
     display: flex;
     justify-content: space-around;
+    text-align: center;
 }
 
-#visitorImg {
-    width: 100px;
+#contactBtn, #homeBtn, #menuBtn {
+    width: 120px;
 }
 
 .crownSpace {
-    height: 50px;
-    width: 100px;
+    height: 60px;
+    width: 120px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 120px 60px;
     background-image: "";
+    justify-content: center;
 }
 
 #homeCrown {
     background-image: url("./crown.png");
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+/*Home tab*/
+#homeTab {
+    display: flex;
+    flex-direction: column;
+}
+
+#visitorImg {
+    width: 100px;
+}
+
+/*Menu tab*/
+
+/*Contact tab*/
+#contactTab {
+    flex-direction: column;
 }

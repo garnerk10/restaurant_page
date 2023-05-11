@@ -27,11 +27,6 @@ const createNavBar = (() => {
     const homeCrown = document.createElement('div');
     homeCrown.setAttribute('class', 'crownSpace');
     homeCrown.setAttribute('id', 'homeCrown');
-    homeCrown.onclick = function(){
-        homeCrown.style.backgroundImage = "url(./crown.png)";
-        menuCrown.style.backgroundImage = '';
-        contactCrown.style.backgroundImage = '';
-    };
     homeHolder.appendChild(homeCrown);
     const homeTab = document.createElement("h2");
     homeTab.innerText = "Home";
@@ -43,11 +38,6 @@ const createNavBar = (() => {
     const menuCrown = document.createElement('div');
     menuCrown.setAttribute('class', 'crownSpace');
     menuCrown.setAttribute('id', 'menuCrown');
-    menuCrown.onclick = function(){
-        homeCrown.style.backgroundImage = '';
-        menuCrown.style.backgroundImage = "url(./crown.png)";
-        contactCrown.style.backgroundImage = '';
-    };
     menuHolder.appendChild(menuCrown);
     const menuTab = document.createElement("h2");
     menuTab.innerText = "Menu";
@@ -59,11 +49,6 @@ const createNavBar = (() => {
     const contactCrown = document.createElement('div');
     contactCrown.setAttribute('class', 'crownSpace');
     contactCrown.setAttribute('id', 'contactCrown');
-    contactCrown.onclick = function(){
-        homeCrown.style.backgroundImage = '';
-        menuCrown.style.backgroundImage = '';
-        contactCrown.style.backgroundImage = "url(./crown.png)";
-    };
     contactHolder.appendChild(contactCrown);
     const contactTab = document.createElement("h2");
     contactTab.innerText = "Contact Us";
@@ -134,7 +119,7 @@ const menuTab = (() => {
     menuDiv.appendChild(menuGrid);
     content.appendChild(menuDiv);
     const displayOn = () => {
-        menuDiv.style.display = "flex";
+        menuDiv.style.display = "grid";
     }
 
     const displayOff = () => {
@@ -160,7 +145,7 @@ const contactTab = (() => {
 
     const infoDiv = document.createElement('div');
     const phoneNum = document.createElement('h3');
-    phoneNum.innerText = "Pone: 444-333-1212";
+    phoneNum.innerText = "Phone: 444-333-1212";
     const email = document.createElement('h3');
     email.innerText = "Email: PalaceDiner@realemail.com";
     infoDiv.appendChild(phoneNum);
@@ -181,24 +166,39 @@ const contactTab = (() => {
     return{contactDiv, displayOn, displayOff}
 })();
 
+//Navigation buttons and function
 const homeBtn = document.getElementById('homeBtn');
 const menuBtn = document.getElementById('menuBtn');
 const contactBtn = document.getElementById('contactBtn');
+const homeBtnCrown = document.getElementById('homeCrown');
+const menuBtnCrown = document.getElementById('menuCrown');
+const contactBtnCrown = document.getElementById('contactCrown');
 
 homeBtn.onclick = function(){
     homeTab.displayOn();
     menuTab.displayOff();
     contactTab.displayOff();
+    homeBtnCrown.style.backgroundImage = `url(${Crown})`;
+    menuBtnCrown.style.backgroundImage = `none`;
+    contactBtnCrown.style.backgroundImage = 'none';
 };
 
 menuBtn.onclick = function(){
     homeTab.displayOff();
     menuTab.displayOn();
     contactTab.displayOff();
+    homeBtnCrown.style.backgroundImage = 'none';
+    menuBtnCrown.style.backgroundImage = `url(${Crown})`;
+    contactBtnCrown.style.backgroundImage = 'none';
 };
 
 contactBtn.onclick = function(){
     homeTab.displayOff();
     menuTab.displayOff();
     contactTab.displayOn();
+    homeBtnCrown.style.backgroundImage = 'none';
+    menuBtnCrown.style.backgroundImage = `none`;
+    contactBtnCrown.style.backgroundImage = `url(${Crown})`;
 };
+
+
