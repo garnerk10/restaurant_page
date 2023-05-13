@@ -1,6 +1,37 @@
+@font-face {
+    font-family: "Magnificent";
+    src: url(./MagnificChaosPersonalUseRegular-x3J88.ttf);
+}
+
+@font-face {
+    font-family: "Princess";
+    src: url(./PrincessAndTheFrog-XdMd.ttf);
+}
+
+body {
+    background-image: url(./wallpaper.jpg);
+    margin: 0;
+    min-width: 575px;
+}
+
 #title {
+    background-color: rgb(256 256 256 / 92%);
     color: blue;
     text-align: center;
+    margin: 0;
+    padding: 40px 0;
+    font-family: "Magnificent";
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-weight: 300;
+    background-image: url("./frame1.png");
+    background-size: 500px 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 120px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 /*Navigation bar and crown tabs*/
@@ -8,10 +39,35 @@
     display: flex;
     justify-content: space-around;
     text-align: center;
+    background-color: rgb(256 256 256 / 92%);
+    border-bottom: 10px solid rgb(0 74 188 / 92%);
+    margin: 0;
+}
+
+
+
+.btnHolder {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #contactBtn, #homeBtn, #menuBtn {
-    width: 120px;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    border-top: 10px solid rgb(0 74 188 / 92%);
+    font-family: "Princess";
+}
+
+#contactHolder, #homeHolder {
+    width: 33%;
+}
+
+#menuHolder {
+    width: 34%;
 }
 
 .crownSpace {

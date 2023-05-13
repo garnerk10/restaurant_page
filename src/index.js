@@ -24,6 +24,8 @@ const createNavBar = (() => {
     navDiv.setAttribute("id", "navDiv");
 
     const homeHolder = document.createElement('div');
+    homeHolder.setAttribute('class', 'btnHolder');
+    homeHolder.setAttribute('id', 'homeHolder');
     const homeCrown = document.createElement('div');
     homeCrown.setAttribute('class', 'crownSpace');
     homeCrown.setAttribute('id', 'homeCrown');
@@ -35,6 +37,8 @@ const createNavBar = (() => {
     navDiv.appendChild(homeHolder);
 
     const menuHolder = document.createElement('div');
+    menuHolder.setAttribute('class', 'btnHolder');
+    menuHolder.setAttribute('id', 'menuHolder');
     const menuCrown = document.createElement('div');
     menuCrown.setAttribute('class', 'crownSpace');
     menuCrown.setAttribute('id', 'menuCrown');
@@ -46,6 +50,8 @@ const createNavBar = (() => {
     navDiv.appendChild(menuHolder);
 
     const contactHolder = document.createElement('div');
+    contactHolder.setAttribute('class', 'btnHolder');
+    contactHolder.setAttribute('id', 'contactHolder');
     const contactCrown = document.createElement('div');
     contactCrown.setAttribute('class', 'crownSpace');
     contactCrown.setAttribute('id', 'contactCrown');
