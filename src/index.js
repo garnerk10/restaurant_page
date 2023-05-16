@@ -1,7 +1,6 @@
 import './style.css';
 import Cinderella from './cinderella.jpg';
 import Crown from './crown.png';
-import TabFrame from './tabFrame.png';
 
 const createContent = () => {
     const contentDiv = document.createElement("div");
@@ -68,6 +67,9 @@ const createNavBar = (() => {
 
 const homeTab = (() => {
     const homeDiv = document.createElement("div");
+    const bgDiv = document.createElement('div');
+    bgDiv.setAttribute('class', 'background');
+    homeDiv.appendChild(bgDiv);
     homeDiv.setAttribute('class', 'tab');
     homeDiv.setAttribute('id', 'homeTab');
 
@@ -117,6 +119,9 @@ const homeTab = (() => {
 
 const menuTab = (() => {
     const menuDiv = document.createElement("div");
+    const bgDiv = document.createElement('div');
+    bgDiv.setAttribute('class', 'background');
+    menuDiv.appendChild(bgDiv);
     menuDiv.setAttribute('class', 'tab');
     menuDiv.setAttribute('id', 'menuTab');
     menuDiv.style.display = 'none'
@@ -138,6 +143,9 @@ const menuTab = (() => {
 
 const contactTab = (() => {
     const contactDiv = document.createElement("div");
+    const bgDiv = document.createElement('div');
+    bgDiv.setAttribute('class', 'background');
+    contactDiv.appendChild(bgDiv);
     contactDiv.setAttribute('class', 'tab');
     contactDiv.setAttribute('id', 'contactTab');
     contactDiv.style.display = 'none';
