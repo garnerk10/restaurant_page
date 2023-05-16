@@ -1,6 +1,7 @@
 import './style.css';
 import Cinderella from './cinderella.jpg';
 import Crown from './crown.png';
+import TabFrame from './tabFrame.png';
 
 const createContent = () => {
     const contentDiv = document.createElement("div");
@@ -72,7 +73,7 @@ const homeTab = (() => {
 
     //Div container for about paragraph
     const aboutDiv = document.createElement('div');
-    aboutDiv.setAttribute('class', 'container');
+    aboutDiv.setAttribute('id', 'aboutContainer');
 
     const homeHead = document.createElement('h3');
     homeHead.innerText = 'Welcome to the Palace!';
@@ -85,7 +86,7 @@ const homeTab = (() => {
 
     //Div container for visitor information
     const visitorDiv = document.createElement('div');
-    visitorDiv.setAttribute('class', 'container');
+    visitorDiv.setAttribute('id', 'visitorContainer');
 
     const visitorTitle = document.createElement('h3');
     visitorTitle.innerText = "This week's visitor";

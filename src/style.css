@@ -89,6 +89,22 @@ body {
 #homeTab {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+#aboutContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./tabFrame.png);
+    background-size:700px 167px;
+    background-repeat: no-repeat;
+    padding: 10px 100px;
+    background-color: rgb(256 256 256 / 92%);
+
 }
 
 #visitorImg {
