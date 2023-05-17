@@ -114,12 +114,14 @@ body {
 .background {
     position: absolute;
     z-index: -1;
-    background-image: url(./tabFrame.png);
-    background-repeat: none;
+    background-image: url(./tabFrame2.png);
     background-size: cover;
-    margin: 10px 0;
-    width: 100%;
-    height: 100%;
+    background-repeat: none;
+    background-color: rgb(256 256 256 / 92%);
+    min-width: 670px;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 900px;
 }
 
 #aboutContainer {
@@ -130,15 +132,21 @@ body {
     align-items: center;
     justify-content: center;
     padding: 10px 100px;
-    background-color: rgb(256 256 256 / 92%);
+    margin-top: 5%;
+}
+
+.tab {
 }
 
 .tab p {
     font-family: "Marcellus", sans-serif;
+    font-size: 20px;
+    max-width: 600px;
 }
 
 .tab h3 {
     font-family: "White Dream", sans-serif;
+    font-size: 40px;
     letter-spacing: 2px;
 }
 
@@ -146,11 +154,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(256 256 256 / 92%);
 }
 
 #visitorImg {
-    width: 100px;
+    width: 130px;
     border: solid 5px rgb(197 170 81);
     border-radius: 60%;
 }
@@ -160,4 +167,18 @@ body {
 /*Contact tab*/
 #contactTab {
     flex-direction: column;
+    align-items: center;
+}
+
+#partyDiv, #contactDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tab h4 {
+    text-align: center;
+    font-family: "Marcellus", serif;
+    font-size: 30px;
 }

@@ -82,7 +82,7 @@ const homeTab = (() => {
     aboutDiv.appendChild(homeHead);
     
     const about = document.createElement('p');
-    about.innerText = "Come in and enjoy a meal with some of your favorite princesses! Many princesses visit our dining room so be sure to check our site. You don't miss your favorite one!"
+    about.innerText = "Come in and enjoy a meal with some of your favorite royal characters! Many royalty visit our dining room so be sure to check our site. You don't miss your favorite one!"
     aboutDiv.appendChild(about);
     homeDiv.appendChild(aboutDiv);
 
@@ -151,18 +151,20 @@ const contactTab = (() => {
     contactDiv.style.display = 'none';
 
     const partyDiv = document.createElement('div');
-    const partyHeader = document.createElement('h3');
-    partyHeader.innerText = "Special Events";
+        partyDiv.setAttribute('id', 'partyDiv');
+        const partyHeader = document.createElement('h3');
+        partyHeader.innerText = "Special Events";
     partyDiv.appendChild(partyHeader);
-    const partyInfo = document.createElement('p');
-    partyInfo.innerText = "We can help you plan your special event here at our diner! Contact us with the details of your event and we will help make it a time you'll never forget!"
+        const partyInfo = document.createElement('p');
+        partyInfo.innerText = "We can help you plan your special event here at our diner! Contact us with the details of your event and we will help make it a time you'll never forget!"
     partyDiv.appendChild(partyInfo);
 
     const infoDiv = document.createElement('div');
-    const phoneNum = document.createElement('h3');
-    phoneNum.innerText = "Phone: 444-333-1212";
-    const email = document.createElement('h3');
-    email.innerText = "Email: PalaceDiner@realemail.com";
+        infoDiv.setAttribute('id', 'infoDiv');
+        const phoneNum = document.createElement('h4');
+        phoneNum.innerText = "Phone: 444-333-1212";
+        const email = document.createElement('h4');
+        email.innerText = "Email: PalaceDiner@realemail.com";
     infoDiv.appendChild(phoneNum);
     infoDiv.appendChild(email);
 
