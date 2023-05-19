@@ -1,6 +1,12 @@
 import './style.css';
 import Cinderella from './cinderella.jpg';
 import Crown from './crown.png';
+import Food1 from './food1.jpg';
+import Food2 from './food2.jpg';
+import Food3 from './food3.jpeg';
+import Food4 from './food4.jpeg';
+import Food5 from './food5.jpg';
+import Food6 from './food6.jpg';
 
 const createContent = () => {
     const contentDiv = document.createElement("div");
@@ -119,19 +125,52 @@ const homeTab = (() => {
 
 const menuTab = (() => {
     const menuDiv = document.createElement("div");
-    const bgDiv = document.createElement('div');
-    bgDiv.setAttribute('class', 'background');
-    menuDiv.appendChild(bgDiv);
     menuDiv.setAttribute('class', 'tab');
     menuDiv.setAttribute('id', 'menuTab');
     menuDiv.style.display = 'none'
 
-    const menuGrid = document.createElement('div');
+        const bgDiv = document.createElement('div');
+        bgDiv.setAttribute('class', 'background');
+        menuDiv.appendChild(bgDiv);
 
-    menuDiv.appendChild(menuGrid);
+        const menuGrid = document.createElement('div');
+        menuGrid.setAttribute('id', 'menuGrid');
+            const food1 = new Image();
+            food1.src = Food1;
+            food1.setAttribute('class', 'foodPic');
+            menuGrid.appendChild(food1);
+
+            const food2 = new Image();
+            food2.src = Food2;
+            food2.setAttribute('class', 'foodPic');
+            menuGrid.appendChild(food2);
+
+            const food3 = new Image();
+            food3.src = Food3;
+            food3.setAttribute('class', 'foodPic');
+            menuGrid.appendChild(food3);
+
+            const food4 = new Image();
+            food4.src = Food4;
+            food4.setAttribute('class', 'foodPic');
+            menuGrid.appendChild(food4);
+
+            const food5 = new Image();
+            food5.src = Food5;
+            food5.setAttribute('class', 'foodPic');
+            menuGrid.appendChild(food5);
+
+            const food6 = new Image();
+            food6.src = Food6;
+            food6.setAttribute('class', 'foodPic');
+            menuGrid.appendChild(food6);
+
+        menuDiv.appendChild(menuGrid);
+    
     content.appendChild(menuDiv);
+
     const displayOn = () => {
-        menuDiv.style.display = "grid";
+        menuDiv.style.display = "flex";
     }
 
     const displayOff = () => {

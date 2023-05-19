@@ -135,9 +135,6 @@ body {
     margin-top: 5%;
 }
 
-.tab {
-}
-
 .tab p {
     font-family: "Marcellus", sans-serif;
     font-size: 20px;
@@ -163,6 +160,22 @@ body {
 }
 
 /*Menu tab*/
+#menuTab {
+    flex-direction: column;
+    align-items: center;
+}
+#menuGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10%;
+    gap: 20px;
+    align-self: center;
+}
+.foodPic {
+    width: 200px;
+    height: 200px;
+    border: 5px solid rgb(197 170 81);
+}
 
 /*Contact tab*/
 #contactTab {
